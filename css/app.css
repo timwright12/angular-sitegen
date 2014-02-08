@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 1em/1.6 "Playfair Display", serif;
+  color: #333;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: Lato, sans-serif;
+}
+
+input {
+  font-size: inherit;
+  padding: 6px 12px;
+  display: inline-block;
+}
+
+.is-hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.hero {
+  font-family: Lato, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  height: 500px;
+  margin-bottom: 24px;
+  font-size: 2em;
+}
+
+.hero input {
+  max-width: 400px;
+}
+
+.contain {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.columns {
+  float: left;
+}
+
+.large-4 {
+  width: 33.333333%;
+}
+
+.large-6 {
+  width: 50%;
+}
+
+.large-12 {
+  width: 100%;
+}
+
+.clearfix {
+  overflow: hidden;
+  clear: both;
+}
+
+.module {
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.module-media {
+  margin: 24px 0;
+}
+
+@media screen and (max-width: 700px) {
+  
+  .hero {
+    height: 300px;
+  }
+  
+  .small-12 {
+    width: 100%;
+  }
+  
+}
