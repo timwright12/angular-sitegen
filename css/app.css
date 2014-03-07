@@ -7,6 +7,7 @@
 body {
   font: 1em/1.6 "Playfair Display", serif;
   color: #333;
+  padding-top: 60px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -43,6 +44,45 @@ p:last-child {
   display: block;
 }
 
+.appname {
+  color: red;
+}
+
+live-icon {
+  display: block;
+  float:left;
+}
+
+.is-fixed {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  z-index: 100;
+}
+
+.header {
+  color: #fff;
+  height: 60px;
+}
+
+.header .logo {}
+.header .logo-image img {
+  height: 40px;
+  position: relative;
+  top: 10px;
+  margin-right: 10px;
+}
+.header .logo-text{
+  line-height: 60px;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  font-size: 20px;
+}
+
+.header {}
+
 .hero {
   font-family: Lato, sans-serif;
   display: flex;
@@ -52,15 +92,64 @@ p:last-child {
   height: 500px;
   margin-bottom: 24px;
   font-size: 2em;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
 }
 
 .hero input {
   max-width: 400px;
 }
 
+.image-icon {
+  color: #fff;
+  -webkit-filter: invert(100%);
+}
+.image-content {
+  max-height: 250px;
+  display: block;
+  margin: auto;
+}
+.image-hero {
+  border: 0;
+  position: absolute;
+  min-width: 102%;
+  min-height: 102%;
+  left: -1%;
+  top: -1%;
+  z-index: 0;
+  -moz-filter: blur(4px);
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+.callout {
+  background: teal;
+  color: #fff;
+  padding: 24px !important;
+}
+
+.hero:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.2);
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.hero-content {
+  position: relative;
+  z-index: 99;
+}
+
 .contain {
   max-width: 1000px;
   margin: auto;
+  padding:0 20px;
 }
 
 .columns {

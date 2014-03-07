@@ -7,18 +7,20 @@ var siteGenApp = angular.module('siteGenApp', [
 
   'siteGenControllers',
   'siteGenFilters',
-  'siteGenServices'
+  'siteGenServices',
+  'siteGenDirectives'
 ]);
 
 // application routing
-siteGenApp.config(['$routeProvider',
-  function($routeProvider) {
+siteGenApp.config(['$routeProvider','$locationProvider',
+  function($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
     $routeProvider.
-      when('/', {
+      when('/angular-sitegen/', {
         templateUrl: 'partials/home.html',
         controller: 'siteGenCtrl'
       }).
       otherwise({
-        redirectTo: '/'
+        redirectTo: '/angular-sitegen/'
       });
   }]);

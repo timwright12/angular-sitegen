@@ -1,53 +1,91 @@
 <div ng-controller="siteGenCtrl">
+<div class="is-fixed header">
+  <div class="contain">
+    <span class="logo">
+      <span class="logo-image"><live-icon></live-icon></span>
+      <span class="logo-text">{{input.noun}}.js</span>
+    </span>
+  </div><!--/.contain-->
+</div><!--/.is-fixed-->
+
 <header class="hero" role="banner">
   <div class="contain">
-    
+      <live-hero></live-hero>
+      
+      <div class="hero-content">
       <form method="get" action="">
-        <label for="sn" class="is-hidden">Enter site name</label>
-        <input type="text" id="sn" name="sn" placeholder="type a noun" ng-model="input.noun">.app
-        <button type="submit" class="is-hidden">Generate Site</button>
-      </form>
-
+          <label for="sn" class="is-hidden">Enter site name</label>
+          <input type="text" value="hammer" id="sn" name="sn" placeholder="type a noun" ng-model="input.noun" ng-change="update()">.js
+          <button type="submit" class="is-hidden">Generate Site</button>
+        </form>
+      </div>
   </div><!--/.contain-->
 </header><!--/.hero-->
 
 <main  class="main" role="main">
-<div class="contain">
   
-  <section class="module large-4 small-12 columns">
-    <h1 class="module-header">Build faster with {{input.noun}}!</h1>
-    <p class="module-content">Fixie tofu +1, kale chips twee iPhone selvage. Swag artisan Helvetica VHS Marfa. Aesthetic chia PBR meggings, stumptown Pinterest pork belly. Synth banjo typewriter, you probably haven't heard of them Portland semiotics Thundercats skateboard Austin single-origin coffee literally farm-to-table.</p>
+  <div class="contain">
+    <section class="module large-4 small-12 columns">
+      <div class="module-header">
+        <h1>Build faster with <span class="appname">{{input.noun}}.js</span>!</h1>
+      </div>
+      
+      <div class="module-content">
+        <lipsum></lipsum>
+      </div>
+    </section><!--/.module-->
+    
+    <section class="module large-4 small-12 columns">
+      <div class="module-header">
+        <h1>Be on budget with <span class="appname">{{input.noun}}.js</span>!</h1>
+      </div>
+      
+      <div class="module-content">
+        <lipsum></lipsum>
+      </div>
+    </section><!--/.module-->
+    
+    <section class="module large-4 small-12 columns">
+      <div class="module-header">
+        <h1><span class="appname">{{input.noun}}App</span> will shorten meetings!</h1>
+      </div>
+      <div class="module-content">
+        <lipsum></lipsum>
+      </div>
+    </section><!--/.module-->
+  </div>
+  
+  <section class="module module-media clearfix">
+  <div class="contain">
+    <div class="large-6 small-12 columns">
+      <img src="{{pictures[0].src}}" alt="{{picture[0].alt}}" class="image-content">
+    </div>
+    <div class="large-6 small-12 columns">
+      <lipsum></lipsum>
+    </div>
+  </div>
   </section><!--/.module-->
   
-  <section class="module large-4 small-12 columns">
-    <h1 class="module-header">Be on budget with {{input.noun}}!</h1>
-    <p class="module-content">Banksy raw denim cray XOXO Tumblr asymmetrical. Pinterest banh mi vegan, farm-to-table readymade typewriter kitsch hoodie flexitarian Wes Anderson. YOLO Marfa put a bird on it, pug chillwave organic 3 wolf moon swag ethnic. Single-origin coffee Tumblr Blue Bottle fingerstache artisan church-key.</p>
-  </section><!--/.module-->
-  
-  <section class="module large-4 small-12 columns">
-    <h1 class="module-header">{{input.noun}} will shorten meetings!</h1>
-    <p class="module-content">Vinyl four loko PBR leggings, gastropub aesthetic Thundercats ethnic. Umami tousled four loko Shoreditch, craft beer bicycle rights slow-carb skateboard Helvetica. Literally Pitchfork hashtag, salvia Pinterest tousled pour-over Blue Bottle. Odd Future next level dreamcatcher Austin wayfarers direct trade.</p>
+  <section class="module module-media clearfix callout">
+    <div class="contain">
+      <div class="large-6 small-12 columns">
+        <lipsum></lipsum>  
+      </div>
+      <div class="large-6 small-12 columns">
+        <img src="{{pictures[1].src}}" alt="{{picture[1].alt}}" class="image-content">
+      </div>
+    </div>
   </section><!--/.module-->
   
   <section class="module module-media clearfix">
+    <div class="contain">
     <div class="large-6 small-12 columns">
-      <img src="http://placehold.it/600x250" alt="placeholder" class="is-block">
+      <img src="{{pictures[2].src}}" alt="{{picture[2].alt}}" class="image-content">
     </div>
-    <div class="large-6 small-12 columns">Vinyl four loko PBR leggings, gastropub aesthetic Thundercats ethnic. Umami tousled four loko Shoreditch, craft beer bicycle rights slow-carb skateboard Helvetica. Literally Pitchfork hashtag, salvia Pinterest tousled pour-over Blue Bottle. Odd Future next level dreamcatcher Austin wayfarers direct trade.</div>
-  </section><!--/.module-->
-  
-  <section class="module module-media clearfix">
-    <div class="large-6 small-12 columns">Banksy raw denim cray XOXO Tumblr asymmetrical. Pinterest banh mi vegan, farm-to-table readymade typewriter kitsch hoodie flexitarian Wes Anderson. YOLO Marfa put a bird on it, pug chillwave organic 3 wolf moon swag ethnic. Single-origin coffee Tumblr Blue Bottle fingerstache artisan church-key.</div>
     <div class="large-6 small-12 columns">
-      <img src="http://placehold.it/600x250" alt="placeholder" class="is-block">
+      <lipsum></lipsum>
     </div>
-  </section><!--/.module-->
-  
-  <section class="module module-media clearfix">
-    <div class="large-6 small-12 columns">
-      <img src="http://placehold.it/600x250" alt="placeholder" class="is-block">
     </div>
-    <div class="large-6 small-12 columns">Fixie tofu +1, kale chips twee iPhone selvage. Swag artisan Helvetica VHS Marfa. Aesthetic chia PBR meggings, stumptown Pinterest pork belly. Synth banjo typewriter, you probably haven't heard of them Portland semiotics Thundercats skateboard Austin single-origin coffee literally farm-to-table.</div>
   </section><!--/.module-->
   
 </div><!--/.contain-->
@@ -56,7 +94,7 @@
 <footer class="footer" role="contentinfo">
   <div class="contain">
     <div class="module">
-      <p>Copyright 2014 {{input.noun}}.js</p>
+      <p>Copyright 2014 <span class="appname">{{input.noun}}.js</span></p>
     </div><!--/.module-->
   </div><!--/.contain-->
 </footer>
