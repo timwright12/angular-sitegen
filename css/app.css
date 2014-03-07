@@ -113,14 +113,14 @@ live-icon {
 .image-hero {
   border: 0;
   position: absolute;
-  min-width: 102%;
-  min-height: 102%;
-  left: -1%;
-  top: -1%;
+  min-width: 150%;
+  min-height: 150%;
+  left: -25%;
+  top: -25%;
   z-index: 0;
-  -moz-filter: blur(4px);
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
+  -moz-filter: blur(2px);
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
 }
 .callout {
   background: teal;

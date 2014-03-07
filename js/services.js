@@ -39,7 +39,7 @@ siteGenServices.factory('photoData', function($http, $q) {
       var flickrAPIKey = '88c626c0707757d87683ed3ecd4d26da';
       var flickrAPIsecret = 'bb0d6b0138b8448b';
       var deferred = $q.defer();
-      var apiUrl = 'http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + flickrAPIKey + '&tags=' + noun + '&format=json&nojsoncallback=1';
+      var apiUrl = 'http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + flickrAPIKey + '&tags=' + noun + '&format=json&nojsoncallback=1&sort=interestingness-desc';
       var returnArray = [];
       
       $http.get(apiUrl).success(function (data) {
