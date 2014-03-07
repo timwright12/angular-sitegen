@@ -1,10 +1,13 @@
+<div ng-controller="siteGenCtrl">
 <header class="hero" role="banner">
   <div class="contain">
-    <form method="get" action="">
-      <label for="sn" class="is-hidden">Enter site name</label>
-      <input type="text" id="sn" name="sn" placeholder="type a noun">.app
-      <button type="submit" class="is-hidden">Generate Site</button>
-    </form>
+    
+      <form method="get" action="">
+        <label for="sn" class="is-hidden">Enter site name</label>
+        <input type="text" id="sn" name="sn" placeholder="type a noun" ng-model="input.noun">.app
+        <button type="submit" class="is-hidden">Generate Site</button>
+      </form>
+
   </div><!--/.contain-->
 </header><!--/.hero-->
 
@@ -12,17 +15,17 @@
 <div class="contain">
   
   <section class="module large-4 small-12 columns">
-    <h1 class="module-header">Build faster with {{text}}!</h1>
+    <h1 class="module-header">Build faster with {{input.noun}}!</h1>
     <p class="module-content">Fixie tofu +1, kale chips twee iPhone selvage. Swag artisan Helvetica VHS Marfa. Aesthetic chia PBR meggings, stumptown Pinterest pork belly. Synth banjo typewriter, you probably haven't heard of them Portland semiotics Thundercats skateboard Austin single-origin coffee literally farm-to-table.</p>
   </section><!--/.module-->
   
   <section class="module large-4 small-12 columns">
-    <h1 class="module-header">Be on budget with {{text}}!</h1>
+    <h1 class="module-header">Be on budget with {{input.noun}}!</h1>
     <p class="module-content">Banksy raw denim cray XOXO Tumblr asymmetrical. Pinterest banh mi vegan, farm-to-table readymade typewriter kitsch hoodie flexitarian Wes Anderson. YOLO Marfa put a bird on it, pug chillwave organic 3 wolf moon swag ethnic. Single-origin coffee Tumblr Blue Bottle fingerstache artisan church-key.</p>
   </section><!--/.module-->
   
   <section class="module large-4 small-12 columns">
-    <h1 class="module-header">{{text}} will shorten meetings!</h1>
+    <h1 class="module-header">{{input.noun}} will shorten meetings!</h1>
     <p class="module-content">Vinyl four loko PBR leggings, gastropub aesthetic Thundercats ethnic. Umami tousled four loko Shoreditch, craft beer bicycle rights slow-carb skateboard Helvetica. Literally Pitchfork hashtag, salvia Pinterest tousled pour-over Blue Bottle. Odd Future next level dreamcatcher Austin wayfarers direct trade.</p>
   </section><!--/.module-->
   
@@ -53,7 +56,9 @@
 <footer class="footer" role="contentinfo">
   <div class="contain">
     <div class="module">
-      <p>Copyright 2014 siteGen.js</p>
+      <p>Copyright 2014 {{input.noun}}.js</p>
     </div><!--/.module-->
   </div><!--/.contain-->
 </footer>
+
+</div><!--initForm-->

@@ -4,9 +4,15 @@
 
 var siteGenControllers = angular.module('siteGenControllers', []);
 
+/*
+  caputire the form input to start the serivce
+*/
+
 siteGenControllers.controller('siteGenCtrl', function ($scope) {
   
-  // main controller?
+
+  
+  
   
 });
   
